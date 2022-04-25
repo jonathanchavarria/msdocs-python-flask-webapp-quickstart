@@ -11,7 +11,7 @@ app = Flask(__name__)
 # ‘/’ URL is bound with hello_world() function.
 
 def main():
-    eq = '8-4'
+    eq = '2*10+5/5-1'
     return (eq + '=' + Helper.integration(eq))
 
 class Calculations:
