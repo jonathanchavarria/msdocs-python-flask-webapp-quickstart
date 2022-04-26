@@ -11,7 +11,7 @@ app = Flask(__name__)
 # ‘/’ URL is bound with hello_world() function.
 
 def main():
-    eq = request.args.get('eq', '2+2')
+    eq = request.args.get('eq', '8*8-4')
     # + = '%2b'
     return (eq + '=' + Helper.integration(eq))
 
