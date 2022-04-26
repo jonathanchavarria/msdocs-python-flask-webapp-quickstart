@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
   
 # Flask constructor takes the name of 
 # current module (__name__) as argument.
@@ -11,8 +11,15 @@ app = Flask(__name__)
 # ‘/’ URL is bound with hello_world() function.
 
 def main():
-    eq = '2*10+5/5-1'
+    eq = request.args.get('eq', '2+2')
+    # + = '%2b'
     return (eq + '=' + Helper.integration(eq))
+
+HELLO_HTML = """
+    <html><body>
+        <h1>Hello, {0}!</h1>
+        The time is {1}.
+    </body></html>"""
 
 class Calculations:
     def add(x, y):
